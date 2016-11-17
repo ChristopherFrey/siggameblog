@@ -1,0 +1,16 @@
+.navbar { margin-bottom: 0px; }
+.navbar img { width: 89; height: 19; }
+
+.container { max-width: 1170px; }
+.container img { width: 200px; float: left; border: 2px solid #000000; margin: 0px 15px 0px 0px; background-color: #ffffff; }
+
+.container2 { max-width: 1170px; }
+.container2 img { width: 100%; border: none; margin: none; background-color: none; float: none; }
+
+.post-list { border-left: 1px #ddd solid; }
+
+.nav-pills li:hover { border-left: 2px #f93 solid; }
+
+.navbar-nav li a { line-height: 28px; }
+
+.well { border: 3px solid #000000; }
