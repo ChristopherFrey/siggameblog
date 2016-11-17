@@ -39,22 +39,6 @@ The site uses the following frameworks and such:
 
 
 
-
-All posts should use the following format
-(looks better if image is displayed first):
-also, you must prepend /path/to/img.png
-aka don't add .. in place of /
-it causes the image to not load :( 
------------------
-
----
-layout: post
-title: "Tite of post"
-author: "Author Name"
----
+To add an image to a post (looks better if image is added at begging of post):
 
 ![Alt text](/path/to/img.png)
-
-## Header for post ##
-
-Text text text text etc
