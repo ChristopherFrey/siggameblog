@@ -1,0 +1,86 @@
+---
+layout: home
+title: Missouri S&T ACM SIG-Game Home
+navbar: home
+---
+
+<div class="page-header">
+  <h1>  <b><font size="15">SIG-Game</font></b>  </h1>
+  <p>
+  <h3>
+   SIG-Game is a special interest group, for Missouri S&amp;T students, that <br>
+   develops and hosts artificial intelligence programming competitions <br>
+   on S&amp;T's campus in Rolla, Missouri.
+  </h3>
+  </p>
+</div>
+
+
+<!----Get the first blog post----->
+
+<div class="well">
+
+<h2><b>Recent Updates:</b></h2>
+
+{% assign post = site.posts.first  %}
+
+<!----------Display the blog post-------->
+<h1>
+  <a href="{{ post.url }}"></a>
+  <small{{ post.date | sate_to_string }}</small>
+</h1>
+
+<div>
+  {{ post.content }}
+  <i>Posted by:</i> <b>{{ post.author }}</b>
+</div>
+
+</div>
+
+<!-----------Megaminer info---------------->
+
+<h1><b>What is MegaMinerAI?</b></h1>
+<p>
+<h4>
+MegaMinerAI is a 24-hour artificial intelligence (AI) programming
+competition hosted each semester by S&amp;T ACM SIG-Game. Competitors must
+use their 24-hours to develop a program to play a novel game developed
+by SIG-Game's development team. The details of the game are kept
+secret until the day of competition, so competitors must demonstrate
+their wits and coding skills to develop the best AI!
+</h4>
+</p>
+<a href="/about/#What-We-Do">Read More >></a>
+
+
+<!--------About SIG-Game------------->
+<h1><b>About SIG-Game:</b></h1>
+<p>
+<h4>
+SIG-Game is an organization dedicated to exploring all facets of game
+development. Members plan the game from design to implementation, collaborating
+with each other and critiquing each others' code in a source-controlled
+enviornment. SIG-Game is welcome to anyone who enjoys the process of creating
+games, video or not.
+</h4>
+</p>
+<a href="/about/">Read More >></a>
+
+
+<!----Display Sponsor Logos---->
+
+<h1><b>Our Sponsors</b></h1>
+{% for sponsor in site.data.sponsors %}
+  <!---layout logos in row of 3----->
+  {% assign count = forloop.index0 | modulo:3 %}
+  {% if count == 0 %}<div class="row">{% endif %}
+  <div class="col-xs-12 col-sm-4 container2">
+    <a href="#{{ sponsor.id }}" class="thumbnail">
+      <img data-src="holder.js/300%x200" alt="{{ sponsor.name }}"
+           src="{{ site.static_url }}img/sponsor_logos/{{ sponsor.image }}">
+    </a>
+  </div>
+  {% if count == 2 or forloop.index == forloop.length %}</div>{% endif %}
+{% endfor %}
+
+
